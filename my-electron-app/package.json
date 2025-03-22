@@ -1,0 +1,15 @@
+{
+  "name": "music-player-app",
+  "version": "1.0.0",
+  "description": "Music player app",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lavinia Lei",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^35.0.3"
+  }
+}
