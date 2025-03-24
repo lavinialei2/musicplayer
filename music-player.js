@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         progressBar.style.width = `${progress}%`;
 
-        progressObj.style.left = `${progressContainer.clientWidth * (progress / 100) - 45}px`;
+        progressObj.style.left = `${progressContainer.clientWidth * (progress / 100) - (progressObj.width / 2)}px`;
 
         timeDisplay.textContent = `${formatTime(audioPlayer.currentTime)}\/${formatTime(audioPlayer.duration)}`;
     }

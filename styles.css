@@ -3,8 +3,13 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    background-color: #E7B59Edd;
+    /* background-color: #E7B59Edd; */
+    width: 500px;
+    height: 900px;
+    background-image: url('./assets/icons/taiyaki.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     margin: 0px;
     font-family: 'Micro 5', sans-serif;
 }
@@ -22,7 +27,7 @@ body {
 #cd {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 #cd-image {
@@ -31,10 +36,10 @@ body {
 }
 
 #progress-container {
-    width: 350px;
+    width: 400px;
     height: 20px;
     margin-top: 20px;
-    background: #39BFD8;
+    background: #39BFD8dd;
     border-radius: 10px;
     position: relative;
 }
@@ -43,35 +48,41 @@ body {
     width: 0%;
     height: 100%;
     border-radius: 10px;
-    background: #0D5F84;
+    background: #0D5F84dd;
 }
 
 @keyframes bobbing {
-    0%, 100% { 
+
+    0%,
+    100% {
         transform: translateY(-2px) rotate(-1deg);
     }
-    50% { 
+
+    50% {
         transform: translateY(2px) rotate(1deg);
     }
 }
 
 #progress-object {
-    width: 90px;
-    height: 38px;
+    width: 120px;
+    height: 50px;
     position: absolute;
-    top: -32px;
-    left: -45px;
+    top: -45px;
+    left: -60px;
     transition: left 0.1s linear;
-    animation: bobbing 1.5s infinite ease-in-out;
-    transform-origin: center bottom; 
+    animation: bobbing 2s infinite ease-in-out;
+    transform-origin: center bottom;
 }
 
 #time-display {
-    color: #D6637C;
+    color: white;
     font-size: 25px;
+    padding: 5px 10px;
     position: absolute;
+    border-radius: 10px;
     top: -5px;
     right: 0px;
+    background-color: #EE8B8Edd;
 }
 
 .controls {
