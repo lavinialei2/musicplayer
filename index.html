@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>plastic cds</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <h3 id ="song-title">one of the ponyo bops</h3>
+        <div id="cd">
+            <img id="cd-image" src="/Users/lavinialei/musicplayer/assets/cds/ponyoSosuke.png" style="width:350px;height:350px;">
+         </div>
+         <div>
+            <audio controls id="audio-player">
+                <source id="audio-source" src="/Users/lavinialei/musicplayer/assets/audios/aNightOfShootingStars.mp3">
+            </audio>
+            <div class="progress-container">
+              <span class="toyBoat" id="toyBoat"><img src="/Users/lavinialei/musicplayer/assets/icons/toyBoat.png"></span>
+            </div>
+       </div>
+       <div class="controls">
+        <button id="prev">
+            <img src="/Users/lavinialei/musicplayer/assets/icons/prev.png" id="prevIcon">
+        </button>
+        <button id="play-pause">
+            <img src="/Users/lavinialei/musicplayer/assets/icons/play.png" id="playIcon">
+            <img src="/Users/lavinialei/musicplayer/assets/icons/pause.png" id="pauseIcon" style="display:none;">
+        </button>
+        <button id="next">
+            <img src="/Users/lavinialei/musicplayer/assets/icons/next.png" id="nextIcon">
+        </button>
+      </div>
+      <script src="music-player.js"></script>
+    </body>
+</html>
