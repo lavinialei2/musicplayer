@@ -1,3 +1,6 @@
+# Audio files
+assets/audios/*.mp3
+
 # Logs
 logs
 *.log

@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", function () {
         updateProgressBar();
     });
 
-    const switchSound = new Audio('/Users/lavinialei/musicplayer/assets/audios/switch.m4a');
+    const switchSound = new Audio('./assets/audios/switch.m4a');
     switchSound.volume = 0.3;
 
     document.querySelectorAll('.controls button').forEach(button => {
