@@ -15,9 +15,9 @@ document.addEventListener("DOMContentLoaded", function () {
     let currentSongIndex = 0;
 
     const songs = [
-        { title: "1 - deep sea pastures", audio: "/Users/lavinialei/musicplayer/assets/audios/deepSeaPastures.mp3", img: "/Users/lavinialei/musicplayer/assets/cds/ponyoBubble.png" },
-        { title: "21 - a night of shooting stars", audio: "/Users/lavinialei/musicplayer/assets/audios/aNightOfShootingStars.mp3", img: "/Users/lavinialei/musicplayer/assets/cds/ponyoWaves.png" },
-        { title: "36 - ponyo on the cliff by the sea", audio: "/Users/lavinialei/musicplayer/assets/audios/ponyoOnTheCliffByTheSea.mp3", img: "/Users/lavinialei/musicplayer/assets/cds/ponyoSosuke.png" },
+        { title: "1 - deep sea pastures", audio: "./assets/audios/deepSeaPastures.mp3", img: "./assets/cds/ponyoBubble.png" },
+        { title: "21 - a night of shooting stars", audio: "./assets/audios/aNightOfShootingStars.mp3", img: "./assets/cds/ponyoWaves.png" },
+        { title: "36 - ponyo on the cliff by the sea", audio: "./assets/audios/ponyoOnTheCliffByTheSea.mp3", img: "./assets/cds/ponyoSosuke.png" },
     ];
 
     function updatePlayer() {
@@ -37,20 +37,20 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     let rotation = 0;
-    let spinningInterval = null; // Interval for updating rotation
+    let spinningInterval = null;
 
     function startSpinning() {
-        if (!spinningInterval) { // Only start if it's not already spinning
+        if (!spinningInterval) {
             spinningInterval = setInterval(() => {
-                rotation += 0.5; // Increment rotation (adjust speed if needed)
+                rotation += 0.5;
                 cdImage.style.transform = `rotate(${rotation}deg)`;
             }, 20);
         }
     }
 
     function stopSpinning() {
-        clearInterval(spinningInterval); // Stop updating rotation
-        spinningInterval = null; // Reset interval so it can start again later
+        clearInterval(spinningInterval);
+        spinningInterval = null;
     }
 
     playPauseButton.addEventListener("click", function () {

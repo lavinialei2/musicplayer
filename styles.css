@@ -26,8 +26,8 @@ body {
 }
 
 #cd-image {
-    width:400px;
-    height:400px;
+    width: 400px;
+    height: 400px;
 }
 
 #progress-container {
@@ -42,7 +42,7 @@ body {
 #progress-bar {
     width: 0%;
     height: 100%;
-    border-radius:10px;
+    border-radius: 10px;
     background: #0D5F84;
 }
 
