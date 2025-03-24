@@ -2,7 +2,7 @@
 
 Simple music player app inspired by nashallery and the Barble The Island Princess CD player I used to have as a kid. Built using Javascript and HTML/CSS in Electron.
 
-Currently features bops from the Ponyo album. May expand artwork into other Ghibli albums and/or Barbie movie soundtracks.
+Currently features bops from the Ponyo album. May expand artwork into other Ghibli albums and/or Barbie movie soundtracks and add an album selector and other features in the future.
 
 
 
