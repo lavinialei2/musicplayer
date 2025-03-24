@@ -4,8 +4,8 @@ const createWindow = () => {
   const win = new BrowserWindow({
     title: 'Music Player',
     width: 450,
-    height: 600,
-    transparent: false,
+    height: 750,
+    transparent: true,
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,

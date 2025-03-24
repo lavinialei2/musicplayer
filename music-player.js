@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
 
     const audioPlayer = document.getElementById('audio-player');
     const audioSource = document.getElementById('audio-source');
@@ -8,74 +8,124 @@ document.addEventListener("DOMContentLoaded", function() {
     const prevButton = document.getElementById('prev');
     const nextButton = document.getElementById('next');
     const progressBar = document.getElementById('progress-bar');
-    const valueDisplay = document.getElementById('value-display');
-    
+    const progressContainer = document.getElementById('progress-container');
+    const progressObj = document.getElementById('progress-object');
+    const timeDisplay = document.getElementById('time-display');
+
     let currentSongIndex = 0;
 
     const songs = [
-        {title: "1 - deep sea pastures", audio: "/Users/lavinialei/musicplayer/assets/audios/deepSeaPastures.mp3", img: "/Users/lavinialei/musicplayer/assets/cds/ponyoSosuke.png"},
-        {title: "21 - a night of shooting stars", audio: "/Users/lavinialei/musicplayer/assets/audios/aNightOfShootingStars.mp3", img: "/Users/lavinialei/musicplayer/assets/cds/ponyoSosuke.png"},
-        {title: "36 - ponyo on the cliff by the sea", audio: "/Users/lavinialei/musicplayer/assets/audios/ponyoOnTheCliffByTheSea.mp3", img: "/Users/lavinialei/musicplayer/assets/cds/ponyoSosuke.png"},
+        { title: "1 - deep sea pastures", audio: "/Users/lavinialei/musicplayer/assets/audios/deepSeaPastures.mp3", img: "/Users/lavinialei/musicplayer/assets/cds/ponyoBubble.png" },
+        { title: "21 - a night of shooting stars", audio: "/Users/lavinialei/musicplayer/assets/audios/aNightOfShootingStars.mp3", img: "/Users/lavinialei/musicplayer/assets/cds/ponyoWaves.png" },
+        { title: "36 - ponyo on the cliff by the sea", audio: "/Users/lavinialei/musicplayer/assets/audios/ponyoOnTheCliffByTheSea.mp3", img: "/Users/lavinialei/musicplayer/assets/cds/ponyoSosuke.png" },
     ];
 
-    function updatePlayer(){
+    function updatePlayer() {
         const currentSong = songs[currentSongIndex];
-        songTitle.innerText = currentSong.title;
+        songTitle.textContent = currentSong.title;
         audioSource.src = currentSong.audio;
         cdImage.src = currentSong.img;
 
         audioPlayer.load();
-        // progressBar.value = 0;
-
     }
 
-    playPauseButton.addEventListener("click", function() {
-        if(audioPlayer.paused){
+    function formatTime(time) {
+        if (!time) return '0:00';
+        const minutes = Math.floor(time / 60);
+        const seconds = Math.floor(time % 60).toString().padStart(2, "0");
+        return `${minutes}:${seconds}`;
+    }
+
+    let rotation = 0;
+    let spinningInterval = null; // Interval for updating rotation
+
+    function startSpinning() {
+        if (!spinningInterval) { // Only start if it's not already spinning
+            spinningInterval = setInterval(() => {
+                rotation += 0.5; // Increment rotation (adjust speed if needed)
+                cdImage.style.transform = `rotate(${rotation}deg)`;
+            }, 20);
+        }
+    }
+
+    function stopSpinning() {
+        clearInterval(spinningInterval); // Stop updating rotation
+        spinningInterval = null; // Reset interval so it can start again later
+    }
+
+    playPauseButton.addEventListener("click", function () {
+        if (audioPlayer.paused) {
             audioPlayer.play();
+            startSpinning();
             playIcon.style.display = "none";
             pauseIcon.style.display = "block";
         }
-        else{
+        else {
             audioPlayer.pause();
+            stopSpinning();
             playIcon.style.display = "block";
             pauseIcon.style.display = "none";
         }
     });
 
-    prevButton.addEventListener("click", function() {
+    prevButton.addEventListener("click", function () {
         currentSongIndex = (currentSongIndex - 1 + songs.length) % songs.length;
         updatePlayer();
 
         audioPlayer.play();
+        startSpinning();
         playIcon.style.display = "none";
         pauseIcon.style.display = "block";
     });
 
-    nextButton.addEventListener("click", function() {
+    nextButton.addEventListener("click", function () {
         currentSongIndex = (currentSongIndex + 1) % songs.length;
         updatePlayer();
 
         audioPlayer.play();
+        startSpinning();
         playIcon.style.display = "none";
         pauseIcon.style.display = "block";
     });
 
+    audioPlayer.addEventListener("ended", function () {
+        currentSongIndex = (currentSongIndex + 1) % songs.length;
+        updatePlayer();
 
-    // audioPlayer.addEventListener("timeupdate", function() {
-    //     if(audioPlayer.duration){
-    //         const progress = (audioPlayer.currentTime / audioPlayer.totalTime);
-    //         progressBar.value = progress;
-    //         valueDisplay.textContent = 'Value: ${Math.floor(progress)}'; //tbd
-    //     }
-    // });
+        audioPlayer.play();
+        startSpinning();
+        playIcon.style.display = "none";
+        pauseIcon.style.display = "block";
+    });
+
+    function updateProgressBar() {
+        const progress = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+        progressBar.style.width = `${progress}%`;
+        progressObj.style.left = `${progressContainer.clientWidth * (progress / 100) - 45}px`;
+        timeDisplay.textContent = `${formatTime(audioPlayer.currentTime)}\/${formatTime(audioPlayer.duration)}`;
+    }
+
+    audioPlayer.addEventListener('timeupdate', updateProgressBar);
+
+    progressContainer.addEventListener('click', (event) => {
+        const clickX = event.offsetX;
+        const progressWidth = progressContainer.clientWidth;
+        const newTime = (clickX / progressWidth) * audioPlayer.duration;
+        audioPlayer.currentTime = newTime;
+        updateProgressBar();
+    });
+
+    const switchSound = new Audio('/Users/lavinialei/musicplayer/assets/audios/switch.m4a');
+    switchSound.volume = 0.3;
+
+    document.querySelectorAll('.controls button').forEach(button => {
+        button.addEventListener('click', () => {
+            switchSound.currentTime = 0;
+            switchSound.play();
+        });
+    });
 
 
-    // Todo this
-    // progressBar.addEventListener("input", function() {
-    //     const seekTime = (progressBar.value / 100) * audioPlayer.duration;
-    //     audioPlayer.currentTime = seekTime;
-    // });
-    
     updatePlayer();
 
 });

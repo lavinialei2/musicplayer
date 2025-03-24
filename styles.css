@@ -1,0 +1,94 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #E7B59Edd;
+    margin: 0px;
+    font-family: 'Micro 5', sans-serif;
+}
+
+#song-title {
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    padding: 10px 40px;
+    background-color: #EE8B8Edd;
+    border-radius: 20px;
+    margin-top: 5px;
+}
+
+#cd {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#cd-image {
+    width:400px;
+    height:400px;
+}
+
+#progress-container {
+    width: 350px;
+    height: 20px;
+    margin-top: 20px;
+    background: #39BFD8;
+    border-radius: 10px;
+    position: relative;
+}
+
+#progress-bar {
+    width: 0%;
+    height: 100%;
+    border-radius:10px;
+    background: #0D5F84;
+}
+
+#progress-object {
+    width: 90px;
+    height: 38px;
+    position: absolute;
+    top: -35px;
+    left: -45px;
+    transition: left 0.1s linear;
+}
+
+#time-display {
+    color: #D6637C;
+    font-size: 25px;
+    position: absolute;
+    top: -5px;
+    right: 0px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.controls button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.controls img {
+    height: 100px;
+}
+
+.controls button {
+    transition: transform 0.1s ease-in-out;
+}
+
+.controls button:hover {
+    transform: scale(0.95);
+}
+
+.controls button:active {
+    transform: scale(0.9);
+}
