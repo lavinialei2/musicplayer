@@ -100,8 +100,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function updateProgressBar() {
         const progress = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+        
         progressBar.style.width = `${progress}%`;
+
         progressObj.style.left = `${progressContainer.clientWidth * (progress / 100) - 45}px`;
+        const bobbingOffset = Math.sin(Date.now() / 300) * 5;
+        progressObject.style.transform = `translateY(${bobbingOffset}px)`;
+
         timeDisplay.textContent = `${formatTime(audioPlayer.currentTime)}\/${formatTime(audioPlayer.duration)}`;
     }
 

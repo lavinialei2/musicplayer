@@ -46,13 +46,19 @@ body {
     background: #0D5F84;
 }
 
+@keyframes bobbing {
+    0%, 100% { transform: translateY(-3px); }
+    50% { transform: translateY(3px); }
+}
+
 #progress-object {
     width: 90px;
     height: 38px;
     position: absolute;
-    top: -35px;
+    top: -32px;
     left: -45px;
     transition: left 0.1s linear;
+    animation: bobbing 1.5s infinite ease-in-out;
 }
 
 #time-display {
