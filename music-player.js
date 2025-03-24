@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const playPauseButton = document.getElementById('play-pause');
     const prevButton = document.getElementById('prev');
     const nextButton = document.getElementById('next');
+    const volumeUp = document.getElementById('volume-up');
+    const volumeDown = document.getElementById('volume-down');
     const progressBar = document.getElementById('progress-bar');
     const progressContainer = document.getElementById('progress-container');
     const progressObj = document.getElementById('progress-object');
@@ -15,9 +17,9 @@ document.addEventListener("DOMContentLoaded", function () {
     let currentSongIndex = 0;
 
     const songs = [
-        { title: "1 - deep sea pastures", audio: "./assets/audios/deepSeaPastures.mp3", img: "./assets/cds/ponyoBubble.png" },
-        { title: "21 - a night of shooting stars", audio: "./assets/audios/aNightOfShootingStars.mp3", img: "./assets/cds/ponyoWaves.png" },
-        { title: "36 - ponyo on the cliff by the sea", audio: "./assets/audios/ponyoOnTheCliffByTheSea.mp3", img: "./assets/cds/ponyoSosuke.png" },
+        { title: "1 - deep sea pastures", audio: "assets/audios/deepSeaPastures.mp3", img: "assets/cds/ponyoBubble.png" },
+        { title: "21 - a night of shooting stars", audio: "assets/audios/aNightOfShootingStars.mp3", img: "assets/cds/ponyoWaves.png" },
+        { title: "36 - ponyo on the cliff by the sea", audio: "assets/audios/ponyoOnTheCliffByTheSea.mp3", img: "assets/cds/ponyoSosuke.png" },
     ];
 
     function updatePlayer() {
@@ -98,6 +100,14 @@ document.addEventListener("DOMContentLoaded", function () {
         pauseIcon.style.display = "block";
     });
 
+    volumeDown.addEventListener("click", () => {
+        audioPlayer.volume = Math.max(0, audioPlayer.volume - 0.1);
+    });
+    
+    volumeUp.addEventListener("click", () => {
+        audioPlayer.volume = Math.min(1, audioPlayer.volume + 0.1);
+    });
+
     function updateProgressBar() {
         const progress = (audioPlayer.currentTime / audioPlayer.duration) * 100;
 
@@ -118,10 +128,10 @@ document.addEventListener("DOMContentLoaded", function () {
         updateProgressBar();
     });
 
-    const switchSound = new Audio('./assets/audios/switch.m4a');
+    const switchSound = new Audio('assets/audios/switch.m4a');
     switchSound.volume = 0.3;
 
-    document.querySelectorAll('.controls button').forEach(button => {
+    document.querySelectorAll('button').forEach(button => {
         button.addEventListener('click', () => {
             switchSound.currentTime = 0;
             switchSound.play();

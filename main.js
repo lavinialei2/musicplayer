@@ -5,6 +5,8 @@ const createWindow = () => {
     title: 'Music Player',
     width: 500,
     height: 930,
+    frame: false,
+    resizable: false,
     transparent: true,
     webPreferences: {
       nodeIntegration: true,

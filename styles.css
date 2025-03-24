@@ -18,7 +18,7 @@ body {
     text-align: center;
     font-size: 25px;
     color: white;
-    padding: 10px 40px;
+    padding: 10px 30px;
     background-color: #EE8B8Edd;
     border-radius: 20px;
     margin-top: 5px;
@@ -64,11 +64,11 @@ body {
 }
 
 #progress-object {
-    width: 120px;
-    height: 50px;
+    width: 150px;
+    height: 63px;
     position: absolute;
-    top: -45px;
-    left: -60px;
+    top: -60px;
+    left: -75px;
     transition: left 0.1s linear;
     animation: bobbing 2s infinite ease-in-out;
     transform-origin: center bottom;
@@ -88,29 +88,38 @@ body {
 .controls {
     display: flex;
     justify-content: center;
-    gap: 40px;
-    margin-top: 50px;
-}
-
-.controls button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
+    gap: 15px;
+    margin-top: 40px;
 }
 
 .controls img {
+    height: 80px;
+}
+
+#play-pause img {
     height: 100px;
 }
 
-.controls button {
+button {
+    background-color: transparent;
+    border-color: transparent;
     transition: transform 0.1s ease-in-out;
 }
 
-.controls button:hover {
+button:hover {
     transform: scale(0.95);
 }
 
-.controls button:active {
+button:active {
     transform: scale(0.9);
+}
+
+.volume-controls {
+    position: absolute;
+    right: 100px;
+    bottom: 50px;
+}
+
+.volume-controls img {
+    height: 60px;
 }
