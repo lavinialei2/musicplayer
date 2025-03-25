@@ -1,0 +1,143 @@
+html, body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    width: 500px;
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../assets/backgrounds/taiyaki.png');
+    background-size: 500px 900px;  
+    background-repeat: no-repeat;  
+    background-position: center;
+    font-family: 'Micro 5', sans-serif;
+}
+
+#song-title {
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    padding: 10px 30px;
+    background-color: #EE8B8Edd;
+    border-radius: 20px;
+    margin-top: 5px;
+}
+
+#cd {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#cd-image {
+    width: 400px;
+    height: 400px;
+}
+
+#progress-container {
+    width: 400px;
+    height: 20px;
+    margin-top: 20px;
+    background: #39BFD8dd;
+    border-radius: 10px;
+    position: relative;
+}
+
+#progress-bar {
+    width: 0%;
+    height: 100%;
+    border-radius: 10px;
+    background: #0D5F84dd;
+}
+
+@keyframes bobbing {
+
+    0%,
+    100% {
+        transform: translateY(-2px) rotate(-1deg);
+    }
+
+    50% {
+        transform: translateY(2px) rotate(1deg);
+    }
+}
+
+#progress-object {
+    width: 150px;
+    height: 63px;
+    position: absolute;
+    top: -60px;
+    left: -75px;
+    transition: left 0.1s linear;
+    animation: bobbing 2s infinite ease-in-out;
+    transform-origin: center bottom;
+}
+
+#time-display {
+    color: white;
+    font-size: 25px;
+    padding: 5px 10px;
+    position: absolute;
+    border-radius: 10px;
+    top: -7px;
+    left: 150px;
+    background-color: #EE8B8Edd;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.controls img {
+    height: 90px;
+}
+
+#play-pause img {
+    height: 100px;
+}
+
+button {
+    background-color: transparent;
+    border-color: transparent;
+    transition: transform 0.1s ease-in-out;
+}
+
+button:hover {
+    transform: scale(0.95);
+}
+
+button:active {
+    transform: scale(0.9);
+}
+
+.volume-controls {
+    position: absolute;
+    left: 370px;
+    bottom: 65px;
+}
+
+.volume-controls img {
+    height: 60px;
+}
+
+.home-button {
+    position: absolute;
+    left: 190px;
+    bottom: 55px;
+}
+
+.home-button img {
+    height: 80px;
+}

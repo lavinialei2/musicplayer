@@ -1,6 +1,15 @@
 {
     "ponyo": {
         "background": "assets/backgrounds/taiyaki.png",
+        "stylesheet": "stylesheets/styles-ponyo.css",
+        "progressObj": "assets/icons/ponyo/toyBoat.png",
+        "prevIcon": "assets/icons/ponyo/prev.png",
+        "playIcon": "assets/icons/ponyo/play.png",
+        "pauseIcon": "assets/icons/ponyo/pause.png",
+        "nextIcon": "assets/icons/ponyo/next.png",
+        "volUpIcon": "assets/icons/ponyo/volup.png",
+        "volDownIcon": "assets/icons/ponyo/voldown.png",
+        "homeIcon": "assets/icons/ponyo/home.png",
         "songs": [
             {
                 "title": "1 - deep sea pastures",
@@ -20,12 +29,21 @@
         ]
     },
     "barbie": {
-        "background": "assets/backgrounds/islandprincessplayer.png",
+        "background": "assets/backgrounds/islandPrincess.png",
+        "stylesheet": "stylesheets/styles-barbie.css",
+        "progressObj": "assets/icons/barbie/gougous.png",
+        "prevIcon": "assets/icons/barbie/prev.png",
+        "playIcon": "assets/icons/barbie/play-pause.png",
+        "pauseIcon": "assets/icons/barbie/play-pause.png",
+        "nextIcon": "assets/icons/barbie/next.png",
+        "volUpIcon": "assets/icons/barbie/volup.png",
+        "volDownIcon": "assets/icons/barbie/voldown.png",
+        "homeIcon": "assets/icons/barbie/home.png",
         "songs": [
             {
-                "title": "three musketeers - all for one",
-                "audio": "assets/audios/barbie/allForOne.mp3",
-                "img": "assets/cds/barbie/musketeers.png"
+                "title": "princess and the popstar - here i am mix",
+                "audio": "assets/audios/barbie/hereIAmMix.mp3",
+                "img": "assets/cds/barbie/propstess.png"
             },
             {
                 "title": "princess charm school - on top of the world",
@@ -33,14 +51,19 @@
                 "img": "assets/cds/barbie/porsche.png"
             },
             {
+                "title": "diamond castle - we're gonna find it",
+                "audio": "assets/audios/barbie/wereGonnaFindIt.mp3",
+                "img": "assets/cds/barbie/melody.png"
+            },
+            {
+                "title": "three musketeers - all for one",
+                "audio": "assets/audios/barbie/allForOne.mp3",
+                "img": "assets/cds/barbie/musketeers.png"
+            },
+            {
                 "title": "pink shoes - keep on dancing",
                 "audio": "assets/audios/barbie/keepOnDancing.mp3",
                 "img": "assets/cds/barbie/princes.png"
-            },
-            {
-                "title": "princess and the popstar - here i am mix",
-                "audio": "assets/audios/barbie/hereIAmMix.mp3",
-                "img": "assets/cds/barbie/propstess.png"
             }
         ]
     }

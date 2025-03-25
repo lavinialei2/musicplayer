@@ -7,58 +7,59 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Micro+5&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" id="stylesheet">
 </head>
 
 <body>
-
-    <div id="album-selection">
-        <h1>Select an Album</h1>
-        <div id="albums-container"></div>
-    </div>
-
-    <div id="music-player" style="display: none;">
-        <h3 id="song-title"></h3>
-        <div id="cd">
-            <img id="cd-image">
+    <div id="container" class="container">
+        <div id="album-selection">
+            <div id="prompt">select an album</div>
+            <div id="albums-container"></div>
         </div>
-        <div>
-            <audio id="audio-player">
-                <source id="audio-source">
-            </audio>
-            <div id="progress-container">
-                <div id="progress-bar"></div>
-                <img id="progress-object" src="assets/icons/toyBoat.png">
-                <h4 id="time-display"></h4>
+
+        <div id="music-player" style="display: none;">
+            <h3 id="song-title"></h3>
+            <div id="cd">
+                <img id="cd-image">
+            </div>
+            <div>
+                <audio id="audio-player">
+                    <source id="audio-source">
+                </audio>
+                <div id="progress-container">
+                    <div id="progress-bar"></div>
+                    <img id="progress-object">
+                    <h4 id="time-display"></h4>
+                </div>
+            </div>
+            <div class="controls">
+                <button id="prev">
+                    <img id="prevIcon">
+                </button>
+                <button id="play-pause">
+                    <img id="playIcon">
+                    <img id="pauseIcon" style="display:none;">
+                </button>
+                <button id="next">
+                    <img id="nextIcon">
+                </button>
+            </div>
+            <div class="volume-controls">
+                <button id="volume-down">
+                    <img id="volDownIcon">
+                </button>
+                <button id="volume-up">
+                    <img id="volUpIcon">
+                </button>
+            </div>
+            <div class="home-button">
+                <button id="home-button">
+                    <img id="homeIcon">
+                </button>
             </div>
         </div>
-        <div class="controls">
-            <button id="prev">
-                <img src="assets/icons/prev.png" id="prevIcon">
-            </button>
-            <button id="play-pause">
-                <img src="assets/icons/play.png" id="playIcon">
-                <img src="assets/icons/pause.png" id="pauseIcon" style="display:none;">
-            </button>
-            <button id="next">
-                <img src="assets/icons/next.png" id="nextIcon">
-            </button>
-        </div>
-        <div class="volume-controls">
-            <button id="volume-down">
-                <img src="assets/icons/voldown.png" id="volDownIcon">
-            </button>
-            <button id="volume-up">
-                <img src="assets/icons/volup.png" id="volUpIcon">
-            </button>
-        </div>
-        <div class="home-button">
-            <button id="home-button">
-                <img src="assets/icons/home.png" id="homeIcon">
-            </button>
-        </div>
+        <script src="music-player.js"></script>
     </div>
-    <script src="music-player.js"></script>
 </body>
 
 </html>

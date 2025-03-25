@@ -3,7 +3,7 @@ const { app, BrowserWindow } = require('electron')
 const createWindow = () => {
   const win = new BrowserWindow({
     title: 'Music Player',
-    width: 500,
+    width: 700,
     height: 930,
     frame: false,
     resizable: false,
@@ -16,7 +16,7 @@ const createWindow = () => {
 
   win.loadFile('index.html')
 
-  win.webContents.openDevTools({mode: 'detach'});
+  //win.webContents.openDevTools({mode: 'detach'});
 }
 
 app.whenReady().then(() => {

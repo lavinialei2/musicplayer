@@ -19,6 +19,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const progressObj = document.getElementById('progress-object');
     const timeDisplay = document.getElementById('time-display');
 
+    const switchSound = new Audio('assets/audios/switch.m4a');
+    switchSound.volume = 0.3;
+
     let albums = {};
     let currentAlbum = null;
     let currentSongIndex = 0;
@@ -39,9 +42,11 @@ document.addEventListener("DOMContentLoaded", function () {
             `;
             })
             .join("");
-        
+
         document.querySelectorAll(".album-button").forEach(button => {
             button.addEventListener("click", function () {
+                switchSound.currentTime = 0;
+                switchSound.play();
                 loadAlbum(this.getAttribute("data-album"));
             });
         });
@@ -53,7 +58,16 @@ document.addEventListener("DOMContentLoaded", function () {
         currentAlbum = albums[albumKey];
         currentSongIndex = 0;
 
-        document.body.style.backgroundImage = `url(${currentAlbum.background})`;
+
+        document.getElementById("stylesheet").href = currentAlbum.stylesheet;
+        progressObj.src = currentAlbum.progressObj;
+        document.getElementById("prevIcon").src = currentAlbum.prevIcon;
+        document.getElementById("playIcon").src = currentAlbum.playIcon;
+        document.getElementById("pauseIcon").src = currentAlbum.pauseIcon;
+        document.getElementById("nextIcon").src = currentAlbum.nextIcon;
+        document.getElementById("volDownIcon").src = currentAlbum.volDownIcon;
+        document.getElementById("volUpIcon").src = currentAlbum.volUpIcon;
+        document.getElementById("homeIcon").src = currentAlbum.homeIcon;
         updatePlayer();
 
         albumSelectionPage.style.display = "none";
@@ -61,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function updatePlayer() {
-        if(!currentAlbum) return;
+        if (!currentAlbum) return;
 
         const currentSong = currentAlbum.songs[currentSongIndex];
         songTitle.textContent = currentSong.title;
@@ -79,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
             pauseIcon.style.display = "none";
         }
 
-        document.body.style.backgroundImage = `url('assets/backgrounds/home.png')`;
+        document.getElementById("stylesheet").href = "styles.css";
         musicPlayerPage.style.display = "none";
         albumSelectionPage.style.display = "block";
     });
@@ -156,7 +170,7 @@ document.addEventListener("DOMContentLoaded", function () {
     volumeDown.addEventListener("click", () => {
         audioPlayer.volume = Math.max(0, audioPlayer.volume - 0.1);
     });
-    
+
     volumeUp.addEventListener("click", () => {
         audioPlayer.volume = Math.min(1, audioPlayer.volume + 0.1);
     });
@@ -180,9 +194,6 @@ document.addEventListener("DOMContentLoaded", function () {
         audioPlayer.currentTime = newTime;
         updateProgressBar();
     });
-
-    const switchSound = new Audio('assets/audios/switch.m4a');
-    switchSound.volume = 0.3;
 
     document.querySelectorAll('button').forEach(button => {
         button.addEventListener('click', () => {
