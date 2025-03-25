@@ -10,21 +10,22 @@ body {
 }
 
 .container {
-    width: 500px;
-    height: 900px;
+    width: 700px;
+    height: 700px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: url('assets/backgrounds/home.png');
-    background-size: 500px 900px;
-    background-repeat: no-repeat;
-    background-position: center;
+    background-color: #E9B7B7dd;
+    border-radius: 20px;
+    border: 40px solid;
+    border-color: #BD8B8Bdd;
     font-family: 'Micro 5', sans-serif;
 }
 
 #prompt {
     text-align: center;
+    color: #973B3B;
     font-family: 'Micro 5', sans-serif;
     font-size: 50px;
 }
