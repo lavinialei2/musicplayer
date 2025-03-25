@@ -93,7 +93,7 @@ body {
 }
 
 .controls img {
-    height: 80px;
+    height: 90px;
 }
 
 #play-pause img {
@@ -117,9 +117,19 @@ button:active {
 .volume-controls {
     position: absolute;
     right: 100px;
-    bottom: 50px;
+    bottom: 60px;
 }
 
 .volume-controls img {
     height: 60px;
+}
+
+.home {
+    position: absolute;
+    left: 90px;
+    bottom: 50px;
+}
+
+.home img {
+    height: 80px;
 }
