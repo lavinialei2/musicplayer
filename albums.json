@@ -1,0 +1,47 @@
+{
+    "ponyo": {
+        "background": "assets/backgrounds/taiyaki.png",
+        "songs": [
+            {
+                "title": "1 - deep sea pastures",
+                "audio": "assets/audios/ponyo/deepSeaPastures.mp3",
+                "img": "assets/cds/ponyo/ponyoBubble.png"
+            },
+            {
+                "title": "21 - a night of shooting stars",
+                "audio": "assets/audios/ponyo/aNightOfShootingStars.mp3",
+                "img": "assets/cds/ponyo/ponyoWaves.png"
+            },
+            {
+                "title": "36 - ponyo on the cliff by the sea",
+                "audio": "assets/audios/ponyo/ponyoOnTheCliffByTheSea.mp3",
+                "img": "assets/cds/ponyo/ponyoSosuke.png"
+            }
+        ]
+    },
+    "barbie": {
+        "background": "assets/backgrounds/islandprincessplayer.png",
+        "songs": [
+            {
+                "title": "three musketeers - all for one",
+                "audio": "assets/audios/barbie/allForOne.mp3",
+                "img": "assets/cds/barbie/musketeers.png"
+            },
+            {
+                "title": "princess charm school - on top of the world",
+                "audio": "assets/audios/barbie/onTopOfTheWorld.mp3",
+                "img": "assets/cds/barbie/porsche.png"
+            },
+            {
+                "title": "pink shoes - keep on dancing",
+                "audio": "assets/audios/barbie/keepOnDancing.mp3",
+                "img": "assets/cds/barbie/princes.png"
+            },
+            {
+                "title": "princess and the popstar - here i am mix",
+                "audio": "assets/audios/barbie/hereIAmMix.mp3",
+                "img": "assets/cds/barbie/propstess.png"
+            }
+        ]
+    }
+}

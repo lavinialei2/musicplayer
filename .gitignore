@@ -1,5 +1,5 @@
 # Audio files
-assets/audios/*.mp3
+assets/audios/
 
 # Logs
 logs

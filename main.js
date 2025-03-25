@@ -16,7 +16,7 @@ const createWindow = () => {
 
   win.loadFile('index.html')
 
-  //win.webContents.openDevTools();
+  win.webContents.openDevTools({mode: 'detach'});
 }
 
 app.whenReady().then(() => {

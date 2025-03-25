@@ -6,7 +6,7 @@ body {
     /* background-color: #E7B59Edd; */
     width: 500px;
     height: 900px;
-    background-image: url('./assets/icons/taiyaki.png');
+    background-image: url('assets/backgrounds/home.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -124,12 +124,31 @@ button:active {
     height: 60px;
 }
 
-.home {
+.home-button {
     position: absolute;
     left: 90px;
     bottom: 50px;
 }
 
-.home img {
+.home-button img {
     height: 80px;
+}
+
+
+#albums-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    padding: 10px;
+}
+
+.album-button {
+    padding: 15px;
+    font-size: 18px;
+    cursor: pointer;
+    font-family: 'Micro 5', sans-serif;
+}
+
+.album-button img {
+    height: 100px;
 }

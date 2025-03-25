@@ -1,5 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+    const albumSelectionPage = document.getElementById("album-selection");
+    const musicPlayerPage = document.getElementById("music-player");
+    const albumsContainer = document.getElementById("albums-container");
+    const homeButton = document.getElementById("home-button");
+
     const audioPlayer = document.getElementById('audio-player');
     const audioSource = document.getElementById('audio-source');
     const songTitle = document.getElementById('song-title');
@@ -14,22 +19,70 @@ document.addEventListener("DOMContentLoaded", function () {
     const progressObj = document.getElementById('progress-object');
     const timeDisplay = document.getElementById('time-display');
 
+    let albums = {};
+    let currentAlbum = null;
     let currentSongIndex = 0;
 
-    const songs = [
-        { title: "1 - deep sea pastures", audio: "assets/audios/deepSeaPastures.mp3", img: "assets/cds/ponyoBubble.png" },
-        { title: "21 - a night of shooting stars", audio: "assets/audios/aNightOfShootingStars.mp3", img: "assets/cds/ponyoWaves.png" },
-        { title: "36 - ponyo on the cliff by the sea", audio: "assets/audios/ponyoOnTheCliffByTheSea.mp3", img: "assets/cds/ponyoSosuke.png" },
-    ];
+
+    async function loadAlbums() {
+        const response = await fetch("albums.json");
+        albums = await response.json();
+
+        albumsContainer.innerHTML = Object.keys(albums)
+            .map(albumKey => {
+                const album = albums[albumKey];
+                return `
+                <button class="album-button" data-album="${albumKey}">
+                    <img src="${album.background}" id="album-cover">
+                    <p>${albumKey}</p>
+                </button>
+            `;
+            })
+            .join("");
+        
+        document.querySelectorAll(".album-button").forEach(button => {
+            button.addEventListener("click", function () {
+                loadAlbum(this.getAttribute("data-album"));
+            });
+        });
+    }
+
+    function loadAlbum(albumKey) {
+        if (!albums[albumKey]) return;
+
+        currentAlbum = albums[albumKey];
+        currentSongIndex = 0;
+
+        document.body.style.backgroundImage = `url(${currentAlbum.background})`;
+        updatePlayer();
+
+        albumSelectionPage.style.display = "none";
+        musicPlayerPage.style.display = "block";
+    }
 
     function updatePlayer() {
-        const currentSong = songs[currentSongIndex];
+        if(!currentAlbum) return;
+
+        const currentSong = currentAlbum.songs[currentSongIndex];
         songTitle.textContent = currentSong.title;
         audioSource.src = currentSong.audio;
         cdImage.src = currentSong.img;
 
         audioPlayer.load();
     }
+
+    homeButton.addEventListener("click", function () {
+        if (!audioPlayer.paused) {
+            audioPlayer.pause();
+            stopSpinning();
+            playIcon.style.display = "block";
+            pauseIcon.style.display = "none";
+        }
+
+        document.body.style.backgroundImage = `url('assets/backgrounds/home.png')`;
+        musicPlayerPage.style.display = "none";
+        albumSelectionPage.style.display = "block";
+    });
 
     function formatTime(time) {
         if (!time) return '0:00';
@@ -71,7 +124,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     prevButton.addEventListener("click", function () {
-        currentSongIndex = (currentSongIndex - 1 + songs.length) % songs.length;
+        currentSongIndex = (currentSongIndex - 1 + currentAlbum.songs.length) % currentAlbum.songs.length;
         updatePlayer();
 
         audioPlayer.play();
@@ -81,7 +134,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     nextButton.addEventListener("click", function () {
-        currentSongIndex = (currentSongIndex + 1) % songs.length;
+        currentSongIndex = (currentSongIndex + 1) % currentAlbum.songs.length;
         updatePlayer();
 
         audioPlayer.play();
@@ -91,7 +144,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     audioPlayer.addEventListener("ended", function () {
-        currentSongIndex = (currentSongIndex + 1) % songs.length;
+        currentSongIndex = (currentSongIndex + 1) % currentAlbum.songs.length;
         updatePlayer();
 
         audioPlayer.play();
@@ -138,7 +191,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-
-    updatePlayer();
+    loadAlbums();
 
 });
