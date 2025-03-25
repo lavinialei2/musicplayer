@@ -54,9 +54,10 @@ button:active {
 
 .album-button {
     padding: 15px;
-    font-size: 18px;
+    font-size: 30px;
     cursor: pointer;
     font-family: 'Micro 5', sans-serif;
+    color: #973B3B;
 }
 
 .album-button img {
