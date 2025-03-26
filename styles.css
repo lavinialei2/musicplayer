@@ -15,12 +15,15 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: top;
     background-color: #E9B7B7dd;
     border-radius: 20px;
     border: 40px solid;
     border-color: #BD8B8Bdd;
     font-family: 'Micro 5', sans-serif;
+
+    overflow-y: auto;
+    padding: 20px;
 }
 
 #prompt {

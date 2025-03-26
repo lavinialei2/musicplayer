@@ -105,5 +105,78 @@
                 "img": "assets/cds/mhe/mhevinyl.png"
             }
         ]
+    },
+    "adkoh": {
+        "background": "assets/backgrounds/human.png",
+        "stylesheet": "stylesheets/styles-adkoh.css",
+        "progressObj": "assets/icons/adkoh/fairy.png",
+        "prevIcon": "assets/icons/adkoh/prev.png",
+        "playIcon": "assets/icons/adkoh/play-pause.png",
+        "pauseIcon": "assets/icons/adkoh/play-pause.png",
+        "nextIcon": "assets/icons/adkoh/next.png",
+        "volUpIcon": "assets/icons/adkoh/volup.png",
+        "volDownIcon": "assets/icons/adkoh/voldown.png",
+        "homeIcon": "assets/icons/adkoh/home.png",
+        "songs": [
+            {
+                "title": "1 - the river",
+                "audio": "assets/audios/adkoh/theRiver.mp3",
+                "img": "assets/cds/adkoh/rivs.png"
+            },
+            {
+                "title": "3 - dance on the moon",
+                "audio": "assets/audios/adkoh/danceOnTheMoon.mp3",
+                "img": "assets/cds/adkoh/dotm.png"
+            },
+            {
+                "title": "4 - daydreamer",
+                "audio": "assets/audios/adkoh/daydreamer.mp3",
+                "img": "assets/cds/adkoh/ream.png"
+            },
+            {
+                "title": "9 - apple tree",
+                "audio": "assets/audios/adkoh/appleTree.mp3",
+                "img": "assets/cds/adkoh/apl.png"
+            }
+        ]
+    },
+    "pure heroine": {
+        "background": "assets/backgrounds/ipod.png",
+        "stylesheet": "stylesheets/styles-ph.css",
+        "progressObj": "assets/icons/ph/hwaboon.png",
+        "prevIcon": "assets/icons/ph/prev.png",
+        "playIcon": "assets/icons/ph/play-pause.png",
+        "pauseIcon": "assets/icons/ph/play-pause.png",
+        "nextIcon": "assets/icons/ph/next.png",
+        "volUpIcon": "assets/icons/ph/volup.png",
+        "volDownIcon": "assets/icons/ph/voldown.png",
+        "homeIcon": "assets/icons/ph/home.png",
+        "songs": [
+            {
+                "title": "1 - tennis court",
+                "audio": "assets/audios/ph/tennisCourt.mp3",
+                "img": "assets/cds/ph/heroine.png"
+            },
+            {
+                "title": "2 - 400 lux",
+                "audio": "assets/audios/ph/400lux.mp3",
+                "img": "assets/cds/ph/heroine.png"
+            },
+            {
+                "title": "4 - ribs",
+                "audio": "assets/audios/ph/ribs.mp3",
+                "img": "assets/cds/ph/heroine.png"
+            },
+            {
+                "title": "5 - buzzcut season",
+                "audio": "assets/audios/ph/buzzcutSzn.mp3",
+                "img": "assets/cds/ph/heroine.png"
+            },
+            {
+                "title": "6 - team",
+                "audio": "assets/audios/ph/team.mp3",
+                "img": "assets/cds/ph/heroine.png"
+            }
+        ]
     }
 }

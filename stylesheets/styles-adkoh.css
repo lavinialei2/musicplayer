@@ -1,0 +1,170 @@
+html,
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    width: 700px;
+    height: 808px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../assets/backgrounds/human.png');
+    background-size: 700px 808px;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Micro 5', sans-serif;
+}
+
+#song-title {
+    font-size: 25px;
+    color: white;
+    padding: 10px 30px;
+    background-color: #1b1624dd;
+    border-radius: 20px;
+
+    position: absolute;
+    top: 500px;
+    left: 30px;
+
+    transform: rotate(-90deg);
+    transform-origin: top left;
+    white-space: nowrap;
+}
+
+#cd {
+    position: absolute;
+    top: 200px;
+    left: 180px;
+}
+
+#cd-image {
+    width: 325px;
+    height: 325px;
+    opacity: 0.85;
+}
+
+#progress-container {
+    width: 400px;
+    height: 20px;
+    margin-top: 5px;
+    background: #C9C6D0dd;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 160px;
+    left: 150px;
+}
+
+#progress-bar {
+    width: 0%;
+    height: 100%;
+    border-radius: 10px;
+    background: #6D1826dd;
+}
+
+@keyframes bobbing {
+
+    0%,
+    100% {
+        transform: translateY(-2px) rotate(-1deg);
+    }
+
+    50% {
+        transform: translateY(2px) rotate(1deg);
+    }
+}
+
+#progress-object {
+    width: 100px;
+    height: 147px;
+    position: absolute;
+    top: -125px;
+    left: -50px;
+    transition: left 0.1s linear;
+    animation: bobbing 2s infinite ease-in-out;
+    transform-origin: center bottom;
+}
+
+#time-display {
+    color: white;
+    font-size: 25px;
+    padding: 5px 10px;
+    position: absolute;
+    border-radius: 10px;
+    top: -7px;
+    left: 150px;
+    background-color: #1b1624dd;
+}
+
+#play-pause {
+    position: absolute;
+    left: 315px;
+    bottom: 300px;
+}
+
+#prev {
+    position: absolute;
+    left: 190px;
+    bottom: 330px;
+}
+
+#next {
+    position: absolute;
+    right: 190px;
+    bottom: 330px;
+}
+
+.controls img {
+    height: 50px;
+}
+
+#play-pause img {
+    height: 50px;
+}
+
+button {
+    background-color: transparent;
+    border-color: transparent;
+    transition: transform 0.1s ease-in-out;
+}
+
+button:hover {
+    transform: scale(0.95);
+}
+
+button:active {
+    transform: scale(0.9);
+}
+
+#volume-down {
+    position: absolute;
+    right: 35px;
+    bottom: 360px;
+}
+
+#volume-up {
+    position: absolute;
+    right: 30px;
+    bottom: 430px;
+}
+
+.volume-controls img {
+    height: 50px;
+}
+
+#home-button {
+    position: absolute;
+    right: 115px;
+    bottom: 475px;
+}
+
+#home-button img {
+    height: 50px;
+}
