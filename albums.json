@@ -66,5 +66,44 @@
                 "img": "assets/cds/barbie/princes.png"
             }
         ]
+    },
+    "mhe": {
+        "background": "assets/backgrounds/vinyl.png",
+        "stylesheet": "stylesheets/styles-mhe.css",
+        "progressObj": "assets/icons/mhe/hwaboon.png",
+        "prevIcon": "assets/icons/mhe/prev.png",
+        "playIcon": "assets/icons/mhe/play-pause.png",
+        "pauseIcon": "assets/icons/mhe/play-pause.png",
+        "nextIcon": "assets/icons/mhe/next.png",
+        "volUpIcon": "assets/icons/mhe/volup.png",
+        "volDownIcon": "assets/icons/mhe/voldown.png",
+        "homeIcon": "assets/icons/mhe/home.png",
+        "songs": [
+            {
+                "title": "8 - goodbye my room",
+                "audio": "assets/audios/mhe/goodbyeMyRoom.mp3",
+                "img": "assets/cds/mhe/mhevinyl.png"
+            },
+            {
+                "title": "9 - hitting the road pt 2",
+                "audio": "assets/audios/mhe/hittingTheRoad.mp3",
+                "img": "assets/cds/mhe/mhevinyl.png"
+            },
+            {
+                "title": "10 - the rainy day we met",
+                "audio": "assets/audios/mhe/theRainyDayWeMet.mp3",
+                "img": "assets/cds/mhe/mhevinyl.png"
+            },
+            {
+                "title": "11 - jenny",
+                "audio": "assets/audios/mhe/jenny.mp3",
+                "img": "assets/cds/mhe/mhevinyl.png"
+            },
+            {
+                "title": "12 - how to be not alone",
+                "audio": "assets/audios/mhe/howToBeNotAlone.mp3",
+                "img": "assets/cds/mhe/mhevinyl.png"
+            }
+        ]
     }
 }

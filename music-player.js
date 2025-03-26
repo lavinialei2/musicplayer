@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 return `
                 <button class="album-button" data-album="${albumKey}">
                     <img src="${album.background}" id="album-cover">
-                    <p>${albumKey}</p>
+                    <div>${albumKey}</div>
                 </button>
             `;
             })

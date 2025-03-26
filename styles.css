@@ -48,7 +48,7 @@ button:active {
 #albums-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    gap: 60px;
     padding: 10px;
 }
 
