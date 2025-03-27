@@ -31,8 +31,8 @@ body {
     border-radius: 20px;
 
     position: absolute;
-    top: 500px;
-    left: 30px;
+    top: 350px;
+    left: 50px;
 
     transform: rotate(-90deg);
     transform-origin: top left;
