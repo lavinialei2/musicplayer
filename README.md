@@ -27,7 +27,7 @@ npm run make
 ```
 
 <div>
-  <img src="assets/backgrounds/taiyaki.png" width="100">
+  <img src="assets/backgrounds/taiyaki.png" width="125">
   <img src="assets/backgrounds/islandPrincess.png" width="175">
   <img src="assets/backgrounds/vinyl.png" width="225">
   <img src="assets/backgrounds/human.png" width="175">
