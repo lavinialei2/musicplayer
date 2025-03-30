@@ -84,6 +84,11 @@
                 "title": "island princess - i need to know",
                 "audio": "assets/audios/barbie/iNeedToKnow.mov",
                 "img": "assets/cds/barbie/roMa.png"
+            },
+            {
+                "title": "island princess - right here in my arms",
+                "audio": "assets/audios/barbie/rightHereInMyArms.mp3",
+                "img": "assets/cds/barbie/roMa.png"
             }
         ]
     },
