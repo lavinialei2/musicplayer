@@ -30,8 +30,9 @@ npm run make
   <img src="assets/backgrounds/taiyaki.png" width="125">
   <img src="assets/backgrounds/islandPrincess.png" width="175">
   <img src="assets/backgrounds/vinyl.png" width="225">
-  <img src="assets/backgrounds/human.png" width="175">
+  <img src="assets/backgrounds/human.png" width="200">
   <img src="assets/backgrounds/ipod.png" width="250">
+  <img src="assets/backgrounds/guitar.png" width="225">
   <img src="assets/icons/ponyo/toyBoat.png" width="150" style="display: inline-block;">
   <img src="assets/icons/barbie/gougous.png" width="150" style="display: inline-block;">
   <img src="assets/icons/mhe/hwaboon.png" width="80" style="display: inline-block;">
