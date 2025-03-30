@@ -1,0 +1,153 @@
+html,
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    width: 700px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../assets/backgrounds/guitar.png');
+    background-size: 700px 700px;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Micro 5', sans-serif;
+}
+
+#song-title {
+    font-size: 25px;
+    color: white;
+    padding: 10px 30px;
+    background-color: transparent;
+    border-radius: 20px;
+
+    position: absolute;
+    top: 160px;
+    right: 75px;
+
+    transform: rotate(-45deg);
+    transform-origin: right;
+}
+
+#cd {
+    position: absolute;
+    bottom: 325px;
+    left: 215px;
+}
+
+#cd-image {
+    width: 150px;
+    height: 150px;
+    opacity: 0.8;
+}
+
+#progress-container {
+    width: 375px;
+    height: 10px;
+    margin-top: 5px;
+    background: #C9C6D0dd;
+    border-radius: 10px;
+    position: absolute;
+    top: 315px;
+    right: 35px;
+    transform: rotate(-45deg);
+}
+
+#progress-bar {
+    width: 0%;
+    height: 100%;
+    border-radius: 10px;
+    background: #F57408dd;
+}
+
+#progress-object {
+    width: 0px;
+    height: 0px;
+}
+
+#time-display {
+    color: white;
+    font-size: 25px;
+    padding: 5px 10px;
+    position: absolute;
+    border-radius: 10px;
+    top: -35px;
+    right: -70px;
+    background-color: transparent;
+    transform: rotate(90deg);
+}
+
+#play-pause {
+    position: absolute;
+    right: 111px;
+    top: 148px;
+}
+
+#prev {
+    position: absolute;
+    right: 130px;
+    top: 180px;
+}
+
+#next {
+    position: absolute;
+    right: 60px;
+    top: 255px;
+}
+
+.controls img {
+    height: 35px;
+}
+
+#play-pause img {
+    height: 35px;
+}
+
+button {
+    background-color: transparent;
+    border-color: transparent;
+    transition: transform 0.1s ease-in-out;
+}
+
+button:hover {
+    transform: scale(0.95);
+}
+
+button:active {
+    transform: scale(0.9);
+}
+
+#volume-down {
+    position: absolute;
+    right: 25px;
+    top: 235px;
+}
+
+#volume-up {
+    position: absolute;
+    right: -8px;
+    top: 214px;
+}
+
+.volume-controls img {
+    height: 35px;
+}
+
+#home-button {
+    position: absolute;
+    right: 92px;
+    top: 116px;
+}
+
+#home-button img {
+    height: 35px;
+}

@@ -41,6 +41,11 @@
         "homeIcon": "assets/icons/barbie/home.png",
         "songs": [
             {
+                "title": "diamond castle - connected",
+                "audio": "assets/audios/barbie/connected.mp3",
+                "img": "assets/cds/barbie/melody.png"
+            },
+            {
                 "title": "princess and the popstar - here i am mix",
                 "audio": "assets/audios/barbie/hereIAmMix.mp3",
                 "img": "assets/cds/barbie/propstess.png"
@@ -51,19 +56,34 @@
                 "img": "assets/cds/barbie/porsche.png"
             },
             {
-                "title": "diamond castle - we're gonna find it",
-                "audio": "assets/audios/barbie/wereGonnaFindIt.mp3",
-                "img": "assets/cds/barbie/melody.png"
-            },
-            {
                 "title": "three musketeers - all for one",
                 "audio": "assets/audios/barbie/allForOne.mp3",
                 "img": "assets/cds/barbie/musketeers.png"
             },
             {
+                "title": "princess and the pauper - a girl like you",
+                "audio": "assets/audios/barbie/aGirlLikeYou.mp3",
+                "img": "assets/cds/barbie/anneliseErika.png"
+            },
+            {
+                "title": "princess and the pauper - free",
+                "audio": "assets/audios/barbie/free.mp3",
+                "img": "assets/cds/barbie/anneliseErika.png"
+            },
+            {
+                "title": "princess and the pauper - written in your heart",
+                "audio": "assets/audios/barbie/writtenInYourHeart.mp3",
+                "img": "assets/cds/barbie/anneliseErika.png"
+            },
+            {
                 "title": "pink shoes - keep on dancing",
                 "audio": "assets/audios/barbie/keepOnDancing.mp3",
                 "img": "assets/cds/barbie/princes.png"
+            },
+            {
+                "title": "island princess - i need to know",
+                "audio": "assets/audios/barbie/iNeedToKnow.mov",
+                "img": "assets/cds/barbie/roMa.png"
             }
         ]
     },
@@ -143,7 +163,7 @@
     "pure heroine": {
         "background": "assets/backgrounds/ipod.png",
         "stylesheet": "stylesheets/styles-ph.css",
-        "progressObj": "assets/icons/ph/hwaboon.png",
+        "progressObj": "",
         "prevIcon": "assets/icons/ph/prev.png",
         "playIcon": "assets/icons/ph/play-pause.png",
         "pauseIcon": "assets/icons/ph/play-pause.png",
@@ -176,6 +196,45 @@
                 "title": "6 - team",
                 "audio": "assets/audios/ph/team.mp3",
                 "img": "assets/cds/ph/heroine.png"
+            }
+        ]
+    },
+    "guitar": {
+        "background": "assets/backgrounds/guitar.png",
+        "stylesheet": "stylesheets/styles-guitar.css",
+        "progressObj": "",
+        "prevIcon": "assets/icons/guitar/prev.png",
+        "playIcon": "assets/icons/guitar/play-pause.png",
+        "pauseIcon": "assets/icons/guitar/play-pause.png",
+        "nextIcon": "assets/icons/guitar/next.png",
+        "volUpIcon": "assets/icons/guitar/volup.png",
+        "volDownIcon": "assets/icons/guitar/voldown.png",
+        "homeIcon": "assets/icons/guitar/home.png",
+        "songs": [
+            {
+                "title": "tracy chapman - fast car",
+                "audio": "assets/audios/guitar/fastCar.mov",
+                "img": "assets/cds/guitar/fc.png"
+            },
+            {
+                "title": "owl city - fireflies",
+                "audio": "assets/audios/guitar/fireflies.mov",
+                "img": "assets/cds/guitar/oc.png"
+            },
+            {
+                "title": "aurora - runaway",
+                "audio": "assets/audios/guitar/runaway.mp3",
+                "img": "assets/cds/guitar/ra.png"
+            },
+            {
+                "title": "jk - still with you",
+                "audio": "assets/audios/guitar/stillWithYou.mp3",
+                "img": "assets/cds/guitar/swy.png"
+            },
+            {
+                "title": "troye sivan - strawberries and cigarettes",
+                "audio": "assets/audios/guitar/strawberriesAndCigarettes.mp3",
+                "img": "assets/cds/guitar/s+c.png"
             }
         ]
     }
